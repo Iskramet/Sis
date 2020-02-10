@@ -1,0 +1,33 @@
+#!/bin/bash
+
+while [ -n "$1" ]
+do
+case "$1" in
+-g) read -p "Git check:" gitcheck
+git clone $gitcheck 
+shift ;;
+esac
+done
+
+usernow=`whoami`
+
+read -p "Day check:" daycheck
+
+cd $usernow
+
+listex=`ls`
+
+echo $listex
+
+for file in $listex
+do
+cd $file
+cp ~/Desktop/sis/$daycheck/$file/main.c main.c
+fttest=`find . -name 'ft*.c'`
+gcc -Wall -Wextra -Werror main.c $fttest -o test
+echo -e "$file - `./test`"
+echo -e "Norminette: `norminette -R CheckForbiddenSourceHeader $fttest`"
+find . -name 'main.c' -delete
+find . -name 'test' -delete
+cd ..
+done
