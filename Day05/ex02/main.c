@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aeladio <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/11 15:08:36 by aeladio           #+#    #+#             */
+/*   Updated: 2020/02/11 15:09:11 by aeladio          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
+#include <stdlib.h>
 
-int		ft_atoi(char *str);
+int    ft_atoi(char *str);
 
-int		main(void)
+int main()
 {
-	printf("%d", ft_atoi("42"));
-	printf("%d", ft_atoi("4 2"));
-	printf("%d", ft_atoi("-42"));
-	printf("%d", ft_atoi("sad"));
-    printf("\n");
-	printf("Answer 424-420");
+	char a[] = "454fg643";
+
+	printf("ft_atoi - %d", ft_atoi(a));
+	printf("\n");
+	printf("atoi - %d", atoi(a));
 }

@@ -5,14 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeladio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/11 15:04:19 by aeladio           #+#    #+#             */
-/*   Updated: 2020/02/11 15:04:56 by aeladio          ###   ########.fr       */
+/*   Created: 2020/02/11 15:15:38 by aeladio           #+#    #+#             */
+/*   Updated: 2020/02/11 15:16:00 by aeladio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_putnbr(int nb);
+#include <stdio.h>
+#include <string.h>
 
-int		main()
+char *ft_strncpy(char *dest, char *src, unsigned int n);
+
+int main()
 {
-	ft_putnbr(-2147483647);
+	char src[64] = "copy in dest";
+	char destt[64];
+	char desttt[64];
+
+	ft_strncpy(destt, src, 50);
+	printf("%s", destt);
+	printf("\n");
+	strncpy(desttt, src, 50);
+	printf("%s", desttt);
 }

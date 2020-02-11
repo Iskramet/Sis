@@ -1,18 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeladio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/11 15:04:19 by aeladio           #+#    #+#             */
-/*   Updated: 2020/02/11 15:04:56 by aeladio          ###   ########.fr       */
+/*   Created: 2020/02/11 22:13:59 by aeladio           #+#    #+#             */
+/*   Updated: 2020/02/11 22:30:34 by aeladio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_putnbr(int nb);
-
-int		main()
+int		alpha(char l)
 {
-	ft_putnbr(-2147483647);
+	if (l >= 'a' && l <= 'z')
+		return (1);
+	if (l >= 'A' && l <= 'Z')
+		return (1);
+	return (0);
+}
+
+int		ft_str_is_alpha(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (!(alpha(str[i])))
+			return (0);
+		i++;
+	}
+	return (1);
 }

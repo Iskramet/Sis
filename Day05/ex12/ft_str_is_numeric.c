@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeladio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/11 15:04:19 by aeladio           #+#    #+#             */
-/*   Updated: 2020/02/11 15:04:56 by aeladio          ###   ########.fr       */
+/*   Created: 2020/02/11 22:32:27 by aeladio           #+#    #+#             */
+/*   Updated: 2020/02/11 22:36:06 by aeladio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_putnbr(int nb);
-
-int		main()
+int		numeric(char l)
 {
-	ft_putnbr(-2147483647);
+	if (l >= '0' && l <= '9')
+		return (1);
+	return (0);
+}
+
+int		ft_str_is_numeric(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (!(numeric(str[i])))
+			return (0);
+		i++;
+	}
+	return (1);
 }

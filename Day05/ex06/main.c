@@ -5,14 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeladio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/11 15:04:19 by aeladio           #+#    #+#             */
-/*   Updated: 2020/02/11 15:04:56 by aeladio          ###   ########.fr       */
+/*   Created: 2020/02/11 15:26:03 by aeladio           #+#    #+#             */
+/*   Updated: 2020/02/11 15:27:06 by aeladio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_putnbr(int nb);
+#include <stdio.h>
+#include <string.h>
 
-int		main()
+int ft_strcmp(char *s1, char *s2);
+
+int main()
 {
-	ft_putnbr(-2147483647);
+    char c1[] = "abcd";
+    char c2[] = "abcdd";
+
+    printf("%d\n", strcmp(c1, c2));
+    printf("%d\n", ft_strcmp(c1, c2));
 }

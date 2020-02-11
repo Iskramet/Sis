@@ -5,14 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeladio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/11 15:04:19 by aeladio           #+#    #+#             */
-/*   Updated: 2020/02/11 15:04:56 by aeladio          ###   ########.fr       */
+/*   Created: 2020/02/11 19:12:00 by aeladio           #+#    #+#             */
+/*   Updated: 2020/02/11 19:17:35 by aeladio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_putnbr(int nb);
+#include <stdio.h>
 
-int		main()
+char *ft_strupcase(char *str);
+
+int main()
 {
-	ft_putnbr(-2147483647);
+	char a[] = "heLlo Kitty";
+
+	printf("%s", ft_strupcase(a));
+
 }
