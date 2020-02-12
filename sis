@@ -33,7 +33,6 @@ then
 	gcc -Wall -Wextra -Werror main.c ft_putchar.c $fttest -o test
 	echo -e "Directory:  $file"
 	echo -e "Return: `./test`"
-	find . -name 'ft_putchar.c' -delete
 else
 	cp $pathsis/$daycheck/$file/main.c main.c
 	fttest=`find . -name 'ft*.c'`
@@ -41,8 +40,6 @@ else
 	echo -e "Directory: $file"
 	echo -e "Return: `./test`"
 fi
-find . -name 'main.c' -delete
-find . -name 'test' -delete
 echo -e "Norminette: `norminette -R CheckForbiddenSourceHeader $fttest`"
 echo -e
 cd ..

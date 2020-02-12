@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeladio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/11 22:13:59 by aeladio           #+#    #+#             */
-/*   Updated: 2020/02/11 22:30:34 by aeladio          ###   ########.fr       */
+/*   Created: 2020/02/11 15:08:36 by aeladio           #+#    #+#             */
+/*   Updated: 2020/02/11 15:09:11 by aeladio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		alpha(char l)
-{
-	if (l >= 'a' && l <= 'z')
-		return (1);
-	if (l >= 'A' && l <= 'Z')
-		return (1);
-	return (0);
-}
+#include <stdio.h>
 
-int		ft_str_is_alpha(char *str)
-{
-	int i;
+int    *ft_strcpy(char *dest, char *src);
 
-	i = 0;
-	while (str[i])
-	{
-		if (!(alpha(str[i])))
-			return (0);
-		i++;
-	}
-	return (1);
+int main()
+{
+	char src[] = "dawdasca";
+    char dest[80];
+
+    ft_strcpy(dest, src);
+	printf("ft_strcpy - %s", dest);
+	printf("\n");
 }
